@@ -1,0 +1,4 @@
+2025-08-17 17:40:55,769 - INFO - Starting Hydroponics ML Pipeline
+2025-08-17 17:40:55,769 - INFO - Initializing Hydroponics ML Pipeline
+2025-08-17 17:40:55,770 - INFO - Dataset not found. Generating new dataset...
+2025-08-17 17:40:55,770 - ERROR - Pipeline execution failed: [Errno 2] No such file or directory: 'data/generate_hydroponics_dataset.py'
