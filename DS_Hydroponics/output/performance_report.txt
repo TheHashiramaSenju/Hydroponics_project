@@ -1,0 +1,154 @@
+================================================================================
+HYDROPONICS ML PIPELINE - PERFORMANCE REPORT
+Generated: 2025-08-17 18:22:58
+================================================================================
+
+TARGET: GROWTH_RATE
+--------------------------------------------------
+  RANDOM_FOREST:
+    R² Score: 0.5747
+    RMSE: 0.5265
+    MAE: 0.4251
+    Best Params: {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200}
+
+  GRADIENT_BOOSTING:
+    R² Score: 0.5794
+    RMSE: 0.5236
+    MAE: 0.4251
+    Best Params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100}
+
+  RIDGE:
+    R² Score: 0.2717
+    RMSE: 0.6890
+    MAE: 0.5485
+    Best Params: {'alpha': 1.0}
+
+
+TARGET: EXPECTED_YIELD
+--------------------------------------------------
+  RANDOM_FOREST:
+    R² Score: 0.6660
+    RMSE: 43.2132
+    MAE: 35.0590
+    Best Params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200}
+
+  GRADIENT_BOOSTING:
+    R² Score: 0.6785
+    RMSE: 42.3945
+    MAE: 34.2833
+    Best Params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100}
+
+  RIDGE:
+    R² Score: 0.3650
+    RMSE: 59.5804
+    MAE: 47.7642
+    Best Params: {'alpha': 1.0}
+
+
+TARGET: HEALTH_SCORE
+--------------------------------------------------
+  RANDOM_FOREST:
+    R² Score: 0.4555
+    RMSE: 5.1324
+    MAE: 4.1178
+    Best Params: {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200}
+
+  GRADIENT_BOOSTING:
+    R² Score: 0.4752
+    RMSE: 5.0388
+    MAE: 4.0553
+    Best Params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100}
+
+  RIDGE:
+    R² Score: 0.2194
+    RMSE: 6.1454
+    MAE: 4.9382
+    Best Params: {'alpha': 1.0}
+
+
+TARGET: DISEASE_RISK
+--------------------------------------------------
+  RANDOM_FOREST:
+    R² Score: 0.9225
+    RMSE: 0.0513
+    MAE: 0.0399
+    Best Params: {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200}
+
+  GRADIENT_BOOSTING:
+    R² Score: 0.9217
+    RMSE: 0.0516
+    MAE: 0.0401
+    Best Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100}
+
+  RIDGE:
+    R² Score: 0.2148
+    RMSE: 0.1632
+    MAE: 0.1373
+    Best Params: {'alpha': 1.0}
+
+
+FEATURE IMPORTANCE SUMMARY
+--------------------------------------------------
+GROWTH_RATE_RANDOM_FOREST:
+Top 5 features:
+  ec_level: 0.3061
+  light_intensity: 0.1945
+  temperature: 0.1670
+  ph_optimal: 0.1242
+  water_temp: 0.0272
+
+GROWTH_RATE_GRADIENT_BOOSTING:
+Top 5 features:
+  ec_level: 0.3681
+  light_intensity: 0.2208
+  temperature: 0.2145
+  ph_optimal: 0.1536
+  hour_cos: 0.0073
+
+EXPECTED_YIELD_RANDOM_FOREST:
+Top 5 features:
+  ec_level: 0.3287
+  light_intensity: 0.1810
+  temperature: 0.1788
+  ph_optimal: 0.1209
+  hour_cos: 0.0342
+
+EXPECTED_YIELD_GRADIENT_BOOSTING:
+Top 5 features:
+  ec_level: 0.3749
+  temperature: 0.2171
+  light_intensity: 0.1870
+  ph_optimal: 0.1416
+  hour_cos: 0.0543
+
+HEALTH_SCORE_RANDOM_FOREST:
+Top 5 features:
+  ec_level: 0.2912
+  light_intensity: 0.1934
+  temperature: 0.1352
+  ph_optimal: 0.1045
+  water_temp: 0.0318
+
+HEALTH_SCORE_GRADIENT_BOOSTING:
+Top 5 features:
+  ec_level: 0.3799
+  light_intensity: 0.2372
+  temperature: 0.1885
+  ph_optimal: 0.1445
+  ph_level: 0.0111
+
+DISEASE_RISK_RANDOM_FOREST:
+Top 5 features:
+  temperature: 0.5754
+  humidity: 0.3933
+  water_temp: 0.0097
+  temp_humidity_ratio: 0.0038
+  comfort_index: 0.0023
+
+DISEASE_RISK_GRADIENT_BOOSTING:
+Top 5 features:
+  temperature: 0.5703
+  humidity: 0.4078
+  water_temp: 0.0074
+  temp_humidity_ratio: 0.0027
+  comfort_index: 0.0025

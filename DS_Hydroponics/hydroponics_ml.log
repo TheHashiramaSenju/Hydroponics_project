@@ -22,3 +22,83 @@ dtype: int64
 2025-08-17 15:19:58,210 - INFO - Starting model training
 2025-08-17 15:19:58,329 - INFO - Training models for growth_rate
 2025-08-17 15:19:58,333 - INFO - Training random_forest for growth_rate
+2025-08-17 17:43:09,226 - INFO - Starting Hydroponics ML Pipeline
+2025-08-17 17:43:09,226 - INFO - Initializing Hydroponics ML Pipeline
+2025-08-17 17:43:09,227 - INFO - Loading data from data/hydroponics_dataset.csv
+2025-08-17 17:43:09,692 - INFO - Data loaded successfully: (50000, 19)
+2025-08-17 17:43:09,693 - INFO - Columns: ['timestamp', 'temperature', 'humidity', 'ph_level', 'ec_level', 'water_temp', 'light_intensity', 'co2_level', 'water_level', 'nitrogen_ppm', 'phosphorus_ppm', 'potassium_ppm', 'pump_status', 'fan_status', 'heater_status', 'growth_rate', 'expected_yield', 'health_score', 'disease_risk']
+2025-08-17 17:43:09,693 - INFO - Starting comprehensive data cleaning
+2025-08-17 17:43:09,732 - INFO - Numeric columns: 18
+2025-08-17 17:43:09,733 - INFO - Categorical columns: 0
+2025-08-17 17:43:09,739 - INFO - Missing values found: temperature    282
+humidity       235
+ph_level       235
+ec_level       248
+dtype: int64
+2025-08-17 17:43:18,550 - INFO - Detecting outliers
+2025-08-17 17:43:20,798 - INFO - Found 2500 outliers (5.00%)
+2025-08-17 17:43:20,977 - INFO - Data cleaning completed successfully
+2025-08-17 17:43:20,977 - INFO - Starting feature engineering
+2025-08-17 17:43:21,079 - INFO - Feature engineering completed. New shape: (50000, 35)
+2025-08-17 17:43:21,079 - INFO - Preparing training data
+2025-08-17 17:43:21,133 - INFO - Final feature matrix shape: (50000, 30)
+2025-08-17 17:43:21,134 - INFO - Target variables: ['growth_rate', 'expected_yield', 'health_score', 'disease_risk']
+2025-08-17 17:43:21,134 - INFO - Starting model training
+2025-08-17 17:43:21,332 - INFO - Training models for growth_rate
+2025-08-17 17:43:21,341 - INFO - Training random_forest for growth_rate
+2025-08-17 17:48:24,109 - INFO - Starting Hydroponics ML Pipeline
+2025-08-17 17:48:24,109 - INFO - Initializing Hydroponics ML Pipeline
+2025-08-17 17:48:24,109 - INFO - Loading data from data/hydroponics_dataset.csv
+2025-08-17 17:48:24,155 - INFO - Data loaded successfully: (5497, 19)
+2025-08-17 17:48:24,156 - INFO - Columns: ['timestamp', 'temperature', 'humidity', 'ph_level', 'ec_level', 'water_temp', 'light_intensity', 'co2_level', 'water_level', 'nitrogen_ppm', 'phosphorus_ppm', 'potassium_ppm', 'pump_status', 'fan_status', 'heater_status', 'growth_rate', 'expected_yield', 'health_score', 'disease_risk']
+2025-08-17 17:48:24,156 - INFO - Starting comprehensive data cleaning
+2025-08-17 17:48:24,159 - INFO - Numeric columns: 18
+2025-08-17 17:48:24,159 - INFO - Categorical columns: 0
+2025-08-17 17:48:24,162 - INFO - Missing values found: temperature    36
+humidity       34
+ph_level       30
+ec_level       29
+dtype: int64
+2025-08-17 17:48:24,350 - INFO - Detecting outliers
+2025-08-17 17:48:25,118 - INFO - Found 275 outliers (5.00%)
+2025-08-17 17:48:25,214 - INFO - Data cleaning completed successfully
+2025-08-17 17:48:25,214 - INFO - Starting feature engineering
+2025-08-17 17:48:25,247 - INFO - Feature engineering completed. New shape: (5497, 35)
+2025-08-17 17:48:25,247 - INFO - Preparing training data
+2025-08-17 17:48:25,254 - INFO - Final feature matrix shape: (5497, 30)
+2025-08-17 17:48:25,254 - INFO - Target variables: ['growth_rate', 'expected_yield', 'health_score', 'disease_risk']
+2025-08-17 17:48:25,255 - INFO - Starting model training
+2025-08-17 17:48:25,303 - INFO - Training models for growth_rate
+2025-08-17 17:48:25,306 - INFO - Training random_forest for growth_rate
+2025-08-17 17:58:10,666 - INFO - random_forest - R²: 0.5747, RMSE: 0.5265
+2025-08-17 17:58:10,702 - INFO - Training gradient_boosting for growth_rate
+2025-08-17 17:59:52,761 - INFO - gradient_boosting - R²: 0.5794, RMSE: 0.5236
+2025-08-17 17:59:52,763 - INFO - Training ridge for growth_rate
+2025-08-17 17:59:53,224 - INFO - ridge - R²: 0.2717, RMSE: 0.6890
+2025-08-17 17:59:53,225 - INFO - Training models for expected_yield
+2025-08-17 17:59:53,227 - INFO - Training random_forest for expected_yield
+2025-08-17 18:05:42,576 - INFO - random_forest - R²: 0.6660, RMSE: 43.2132
+2025-08-17 18:05:42,595 - INFO - Training gradient_boosting for expected_yield
+2025-08-17 18:07:22,022 - INFO - gradient_boosting - R²: 0.6785, RMSE: 42.3945
+2025-08-17 18:07:22,023 - INFO - Training ridge for expected_yield
+2025-08-17 18:07:22,343 - INFO - ridge - R²: 0.3650, RMSE: 59.5804
+2025-08-17 18:07:22,343 - INFO - Training models for health_score
+2025-08-17 18:07:22,346 - INFO - Training random_forest for health_score
+2025-08-17 18:12:59,067 - INFO - random_forest - R²: 0.4555, RMSE: 5.1324
+2025-08-17 18:12:59,086 - INFO - Training gradient_boosting for health_score
+2025-08-17 18:14:37,804 - INFO - gradient_boosting - R²: 0.4752, RMSE: 5.0388
+2025-08-17 18:14:37,805 - INFO - Training ridge for health_score
+2025-08-17 18:14:38,131 - INFO - ridge - R²: 0.2194, RMSE: 6.1454
+2025-08-17 18:14:38,131 - INFO - Training models for disease_risk
+2025-08-17 18:14:38,133 - INFO - Training random_forest for disease_risk
+2025-08-17 18:21:15,954 - INFO - random_forest - R²: 0.9225, RMSE: 0.0513
+2025-08-17 18:21:15,973 - INFO - Training gradient_boosting for disease_risk
+2025-08-17 18:22:57,837 - INFO - gradient_boosting - R²: 0.9217, RMSE: 0.0516
+2025-08-17 18:22:57,839 - INFO - Training ridge for disease_risk
+2025-08-17 18:22:58,217 - INFO - ridge - R²: 0.2148, RMSE: 0.1632
+2025-08-17 18:22:58,218 - INFO - Model training completed successfully
+2025-08-17 18:22:58,218 - INFO - Saving models and components
+2025-08-17 18:22:58,512 - INFO - Models saved successfully to models/hydroponics_model.pkl
+2025-08-17 18:22:58,513 - INFO - Generating performance report
+2025-08-17 18:22:58,526 - INFO - Performance report saved to output/performance_report.txt
+2025-08-17 18:22:58,526 - INFO - Pipeline completed successfully!
